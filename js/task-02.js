@@ -7,7 +7,7 @@ const ingredients = [
   'Condiments',
 ];
 
-const list = document.querySelector(`#ingrediens`);
+const list = document.querySelector(`#ingredients`);
 const listIngredients = ingredients.map(ingredient => {
   const newIngredient = document.createElement(`li`);
   newIngredient.textContent = ingredient;

@@ -22,6 +22,14 @@ console.log(listImages);
 
 list.insertAdjacentHTML("beforeend", listImages);
 
+const li = ul.querySelectorAll(`li`);
+const liClass = li.classList.add("li-class");
+
+
+
+
+
 
 listImages.style.width = "150px";
 list.style.display = "flex";
+liClass.style.listStyleType = "none";
