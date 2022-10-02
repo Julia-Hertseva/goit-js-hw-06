@@ -15,21 +15,12 @@ const images = [
 
 
 
-const list = document.querySelector(`.gallery`);
-const listImages = images.map(image => 
-  `<li><img src="${image.url}" alt="${image.alt}"></li>`).join(``);
-console.log(listImages);
+const listRef = document.querySelector(`.gallery`);
+const listOfImagesRef = images.map(image => 
+  `<li class="gallery__item"><img class="picture" src="${image.url}" alt="${image.alt}"></li>`).join(``);
+console.log(listOfImagesRef);
 
-list.insertAdjacentHTML("beforeend", listImages);
+listRef.insertAdjacentHTML("beforeend", listOfImagesRef);
 
-const li = ul.querySelectorAll(`li`);
-const liClass = li.classList.add("li-class");
-
-
-
-
-
-
-listImages.style.width = "150px";
-list.style.display = "flex";
-liClass.style.listStyleType = "none";
+const imgRef = document.querySelectorAll(`.picture`);
+const itemRef = document.querySelectorAll(`.gallery__item`);
