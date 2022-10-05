@@ -6,12 +6,12 @@ inputText.addEventListener(`blur`, loseFocus);
 
 function loseFocus (event) {
 
-    inputText.value.length === Number(length)
-        ? inputText
-            .classList
-            .add(`valid`)
-        : inputText
-            .classList
-            .add(`invalid`)
+    if (inputText.value.length === Number(length)) {
+        inputText.classList.add(`valid`);
+        inputText.classList.remove(`invalid`);
+    } else {
+        inputText.classList.add(`invalid`);
+        inputText.classList.remove(`valid`);
+    }
     event.preventDefault();
 };

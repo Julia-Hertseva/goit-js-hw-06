@@ -1,4 +1,4 @@
-const ingredientsRef = [
+const ingredients = [
   'Potatoes',
   'Mushrooms',
   'Garlic',
@@ -8,12 +8,13 @@ const ingredientsRef = [
 ];
 
 const listRef = document.querySelector(`#ingredients`);
-const listIngredientsRef = ingredientsRef.map(ingredient => {
+const listIngredientsRef = ingredients.map(ingredient => {
   const newIngredientRef = document.createElement(`li`);
   newIngredientRef.textContent = ingredient;
   newIngredientRef.classList.add(`item`);
 
   console.log(newIngredientRef);
-}).join(``); 
+  return newIngredientRef;
+}); 
 
-listRef.append(listIngredientsRef);
+listRef.append(...listIngredientsRef);
